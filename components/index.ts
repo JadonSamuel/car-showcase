@@ -3,7 +3,7 @@ import CustomButton from "./CustomButton";
 import NavBar from "./Navbar";
 import Footer from "./Footer";
 import SearchBar from "./SearchBar";
-import ShowMore from "./Showmore";
+import ShowMore from "./ShowMore";
 
 import CustomFilter from "./CustomFilter";
 import SearchManufacturer from "./SearchManufacturer";
