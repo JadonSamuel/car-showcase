@@ -3,20 +3,23 @@ import CustomButton from "./CustomButton";
 import NavBar from "./Navbar";
 import Footer from "./Footer";
 import SearchBar from "./SearchBar";
+import ShowMore from "./Showmore";
+
 import CustomFilter from "./CustomFilter";
 import SearchManufacturer from "./SearchManufacturer";
 import CarCard from "./CarCard";
 import CarDetails from "./CarDetails";
-import ShowMore from "./ShowMore";
+
 export {
     Hero,
     CustomButton,
     NavBar,
     Footer,
-    SearchBar,
     CustomFilter,
     SearchManufacturer,
+    SearchBar,
+    ShowMore,
     CarCard,
     CarDetails,
-    ShowMore
+   
 }
