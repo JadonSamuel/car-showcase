@@ -191,6 +191,11 @@
   @apply flex items-center justify-start max-sm:flex-col w-full relative max-sm:gap-4 max-w-3xl;
 }
 
+/* START: searchbar styles */
+.searchbar {
+  @apply flex items-center justify-start max-sm:flex-col w-full relative max-sm:gap-4 max-w-3xl;
+}
+
 .searchbar__item {
   position: relative;
 }
@@ -198,18 +203,8 @@
 .searchbar__input {
   @apply w-full h-[48px] pl-12 p-4 bg-light-white rounded-r-full max-sm:rounded-full outline-none cursor-pointer text-sm;
 }
-/* END: searchbar styles */
 
-/* START: search manufacturer styles */
-.search-manufacturer {
-  @apply flex-1 max-sm:w-full flex justify-start items-center;
-}
-
-.search-manufacturer__input {
-  @apply w-full h-[48px] pl-12 p-4 rounded-l-full max-sm:rounded-full bg-light-white outline-none cursor-pointer text-sm;
-}
-
-.search-manufacturer__options,.search-bar__options {
+.searchbar__options {
   position: absolute;
   top: 100%;
   left: 0;
@@ -222,7 +217,36 @@
   display: none; /* Initially hide the dropdown */
 }
 
-.search-manufacturer__options.show,
-.searchbar__options.show {
-  display: block; /* Show the dropdown when it should be visible */
+/* NEW: Create a stacking context for the dropdown */
+.searchbar__item:hover .searchbar__options {
+  display: block; /* Show the dropdown when the search bar item is hovered */
 }
+/* END: searchbar styles */
+
+/* START: search manufacturer styles */
+.search-manufacturer {
+  @apply flex-1 max-sm:w-full flex justify-start items-center;
+}
+
+.search-manufacturer__input {
+  @apply w-full h-[48px] pl-12 p-4 rounded-l-full max-sm:rounded-full bg-light-white outline-none cursor-pointer text-sm;
+}
+
+.search-manufacturer__options {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 10;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+  display: none; /* Initially hide the dropdown */
+}
+
+/* NEW: Create a stacking context for the dropdown */
+.search-manufacturer__input:hover + .search-manufacturer__options {
+  display: block; /* Show the dropdown when the search manufacturer input is hovered */
+}
+/* END: search manufacturer styles */
